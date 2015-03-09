@@ -92,6 +92,10 @@ func (s *Scraper) parse(n *html.Node) {
 }
 
 func (s *Scraper) attr(n *html.Node, key string) string {
+	if n == nil {
+		return ""
+	}
+	
 	for _, a := range n.Attr {
 		if a.Key == key {
 			return a.Val
