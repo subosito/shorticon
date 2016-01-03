@@ -5,10 +5,10 @@ import (
 )
 
 var urlFavicons = map[string]string{
-	"http://github.com/":   "https://github.com/favicon.ico",
-	"http://subosito.com/": "http://subosito.com/favicon.ico",
+	"http://github.com/":   "https://assets-cdn.github.com/favicon.ico",
+	"http://subosito.com/": "http://subosito.com/assets/img/avatar.png",
 	"https://twitter.com/": "https://abs.twimg.com/favicons/favicon.ico",
-	"http://nytimes.com/":  "http://css.nyt.com/images/icons/nyt.ico",
+	"http://nytimes.com/":  "http://static01.nyt.com/favicon.ico",
 }
 
 func TestScraper(t *testing.T) {

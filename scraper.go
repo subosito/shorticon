@@ -1,12 +1,13 @@
 package shorticon
 
 import (
-	"code.google.com/p/go.net/html"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"regexp"
 	"strings"
+
+	"golang.org/x/net/html"
 )
 
 var Pattern string = "^(shortcut|icon|shortcut icon)$"
@@ -95,7 +96,7 @@ func (s *Scraper) attr(n *html.Node, key string) string {
 	if n == nil {
 		return ""
 	}
-	
+
 	for _, a := range n.Attr {
 		if a.Key == key {
 			return a.Val
